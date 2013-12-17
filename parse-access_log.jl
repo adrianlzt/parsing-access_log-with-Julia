@@ -1,8 +1,3 @@
-lineas = readdlm("LOG",'"')
-ip_fecha,request,code_bytes,url,NULL,browser,NULL = lineas[1,1:end]
-ip,fecha = split(ip_fecha,' ')[[1,4]]
-code,bytes = split(code_bytes,' ')[[2,3]]
-
 type Peticion
   ip
   fecha
@@ -29,4 +24,3 @@ end
 sol = parseentrada!("LOG")
 
 sol[1].ip
-"1.2.4.5
